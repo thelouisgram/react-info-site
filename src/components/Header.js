@@ -1,13 +1,21 @@
 import React from 'react'
 
-export default function Header(){
-    return(
+export default function Header(props) {
+    return (
         <header className="header">
-            <div>
-            <i class="fa-brands fa-react"></i>
-            <h1>ReactFacts</h1>
+            <div className='right'>
+                <i className="fa-brands fa-react"></i>
+                <h1>ReactFacts</h1>
             </div>
-            <h3>React Course - Project 1</h3>
+
+            <div className='left'>
+                <label>Light</label>
+                <div className="check">
+                    <input id="check" onClick={props.handleMode} type="checkbox" />
+                    <label htmlFor="check"></label>
+                </div>
+                <label>Dark</label>
+            </div>
         </header>
     )
 }
